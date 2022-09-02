@@ -1,0 +1,17 @@
+public class Agencia {
+	
+ public static void main(String[] args) {
+	 BancoDeDados bancoDeDados= new BancoDeDados();
+	 bancoDeDados.conectar();
+	 if(bancoDeDados.estaConectado()) {
+		 bancoDeDados.listarContatos();
+		 bancoDeDados.inserirContato("Juliane", "13485-3245");
+		 bancoDeDados.editarContato("10", "Julianetest", "1234-2345");
+		 bancoDeDados.apagarContato("10");
+		 bancoDeDados.desconectar();
+	 } else {
+		 System.out.println("nao foi possivel conectar ao banco de Dados!");
+	 }
+	 
+ }
+}
